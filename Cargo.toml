@@ -1,0 +1,13 @@
+[package]
+name = "k2hash"
+version = "1.0.0"
+edition = "2021"
+description = "k2hash for Rust"
+build = "build.rs"
+
+[dependencies]
+libc = "0.2"
+
+# https://doc.rust-lang.org/cargo/reference/features.html#the-features-section
+[features]
+default-features = []
