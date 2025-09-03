@@ -55,11 +55,6 @@ fn main() {
 }
 ```
 
-Let's run eamples!
-```
-cargo run --example basic_usage
-```
-
 ## Development
 
 Here is the step to start developing **k2hash_rust** on Fedora42.
