@@ -1073,6 +1073,7 @@ extern "C" {
 /// # Examples
 /// https://doc.rust-lang.org/std/iter/index.html#implementing-iterator
 /// ```
+/// use k2hash::{K2hash, K2hashKey};
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// assert!(db.handle() != 0, "Database handle should not be zero");
 /// let key = "hello";
@@ -1155,6 +1156,7 @@ impl Iterator for K2hashKey {
 /// # Examples
 ///
 /// ```
+/// use k2hash::K2hash;
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// assert!(db.handle() != 0, "Database handle should not be zero");
 /// assert!(
@@ -1997,6 +1999,7 @@ impl BaseQueue {
 /// # Examples
 ///
 /// ```
+/// use k2hash::{K2hash, Queue};
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// let handle = db.handle();
 /// assert!(handle != 0, "Handle should not be zero");
@@ -2021,6 +2024,7 @@ pub struct Queue {
 /// # Examples
 ///
 /// ```
+/// use k2hash::{K2hash, KeyQueue};
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// let handle = db.handle();
 /// assert!(handle != 0, "Handle should not be zero");
@@ -2218,6 +2222,7 @@ impl Queue {
 /// # Examples
 ///
 /// ```
+/// use k2hash::{K2hash, QueueBuilder};
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// let handle = db.handle();
 /// assert!(handle != 0, "Handle should not be zero");
@@ -2473,6 +2478,7 @@ impl KeyQueue {
 /// # Examples
 ///
 /// ```
+/// use k2hash::{K2hash, KeyQueueBuilder};
 /// let db = K2hash::open_mem().expect("open_mem failed");
 /// let handle = db.handle();
 /// assert!(handle != 0, "Handle should not be zero");
