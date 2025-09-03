@@ -35,19 +35,19 @@ echo "[OK] HOSTNAME=${HOSTNAME} OS_NAME=${OS_NAME} OS_VERSION=${OS_VERSION}"
 case "${OS_NAME}-${OS_VERSION}" in
     ubuntu*|debian*)
         DEBIAN_FRONTEND="noninteractive" sudo apt-get update -y
-        DEBIAN_FRONTEND="noninteractive" sudo apt-get install -y curl pylint
+        DEBIAN_FRONTEND="noninteractive" sudo apt-get install -y curl
         curl -s https://packagecloud.io/install/repositories/antpickax/stable/script.deb.sh | sudo bash
         DEBIAN_FRONTEND="noninteractive" sudo apt-get install -y k2hash-dev
         ;;
     centos-7)
         sudo yum install -y epel-release-7
-        sudo yum install -y --enablerepo=epel pylint python3 git curl which
+        sudo yum install -y --enablerepo=epel git curl which
         curl -s https://packagecloud.io/install/repositories/antpickax/stable/script.rpm.sh | sudo bash
         sudo yum install -y k2hash-devel
         ;;
     centos-8|fedora*)
         sudo dnf install -y epel-release-8
-        sudo dnf install -y python3-pylint git curl
+        sudo dnf install -y git curl
         curl -s https://packagecloud.io/install/repositories/antpickax/stable/script.rpm.sh | sudo bash
         sudo dnf install -y k2hash-devel
         ;;
